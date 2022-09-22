@@ -1,0 +1,18 @@
+#leftside-menu-container {
+  overflow: hidden scroll;
+}
+
+#leftside-menu-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+#leftside-menu-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.leftside-menu {
+  background: darkblue !important;
+}
