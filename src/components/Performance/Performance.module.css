@@ -1,0 +1,9 @@
+.performanceTitle {
+  padding-bottom: 1rem;
+  overflow: hidden scroll;
+  height: 37rem;
+}
+
+.dropdown-toggle:hover .dropdown-menu {
+  display: block;
+}

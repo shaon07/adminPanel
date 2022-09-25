@@ -2,6 +2,7 @@
 /* eslint-disable no-script-url */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react'
+import { Dropdown } from "react-bootstrap"
 
 const Navbar = () => {
   return (
@@ -58,33 +59,57 @@ const Navbar = () => {
           </li>
 
           <li className="dropdown notification-list topbar-dropdown">
-            <a className="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+
+            <Dropdown className="nav-link dropdown-toggle arrow-none fixedDropBG ">
+              <Dropdown.Toggle>
+                <img src={require('../../assets/images/us.jpg')} alt="user-image" className="me-0 me-sm-1" height="12" />
+                <span className="align-middle d-none d-lg-inline-block">English</span> <i className="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+
+                <Dropdown.Item>
+                  <img src={require("../../assets/images/germany.jpg")} alt="user-mage" className="me-1" height="12" /> <span className="align-middle">German</span>
+                </Dropdown.Item>
+
+                <Dropdown.Item>
+                  <img src={require("../../assets/images/italy.jpg")} alt="user-image" className="me-1" height="12" /> <span className="align-middle">Italian</span>
+                </Dropdown.Item>
+
+                <Dropdown.Item>
+                  <img src={require('../../assets/images/spain.jpg')} alt="user-image" className="me-1" height="12" /> <span className="align-middle">Spanish</span>
+                </Dropdown.Item>
+
+                <Dropdown.Item>
+                  <img src={require('../../assets/images/russia.jpg')} alt="user-image" className="me-1" height="12" /> <span className="align-middle">Russian</span>
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+
+            {/* <a className="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
               <img src={require('../../assets/images/us.jpg')} alt="user-image" className="me-0 me-sm-1" height="12" />
               <span className="align-middle d-none d-lg-inline-block">English</span> <i className="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
-            </a>
-            <div className="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
+            </a> */}
 
-              {/* <!-- item--> */}
+            {/* <div className="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
+
               <a href="/" className="dropdown-item notify-item">
                 <img src="images/germany.jpg" alt="user-mage" className="me-1" height="12" /> <span className="align-middle">German</span>
               </a>
 
-              {/* <!-- item--> */}
               <a href="/" className="dropdown-item notify-item">
                 <img src="images/italy.jpg" alt="user-image" className="me-1" height="12" /> <span className="align-middle">Italian</span>
               </a>
 
-              {/* <!-- item--> */}
               <a href="/" className="dropdown-item notify-item">
                 <img src="images/spain.jpg" alt="user-image" className="me-1" height="12" /> <span className="align-middle">Spanish</span>
               </a>
 
-              {/* <!-- item--> */}
               <a href="/" className="dropdown-item notify-item">
                 <img src="images/russia.jpg" alt="user-image" className="me-1" height="12" /> <span className="align-middle">Russian</span>
               </a>
 
-            </div>
+            </div> */}
           </li>
 
           <li className="dropdown notification-list">

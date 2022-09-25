@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
+import { Dropdown } from "react-bootstrap";
 import { BiChevronDownCircle } from 'react-icons/bi';
 import styles from './ProductStock.module.css';
 
@@ -23,21 +24,17 @@ const ProductStock = () => {
       <div className="card card-h-100">
         <div className="d-flex card-header justify-content-between align-items-center">
           <h4 className="header-title">Product Stocks</h4>
-          <div className="dropdown" onBlur={handleBlur} onClick={() => setShow(!show)}>
-            <a href="#" className="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded={show}>
+          <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic">
               <i className="mdi mdi-dots-vertical"></i>
-            </a>
-            <div className={`dropdown-menu dropdown-menu-end ${show ? styles.showDropMenu : ""}`}>
-              {/* <!-- item--> */}
-              <a href="/" className="dropdown-item" onClick={() => console.log("he")}>Sales Report</a>
-              {/* <!-- item--> */}
-              <a href="/" className="dropdown-item">Export Report</a>
-              {/* <!-- item--> */}
-              <a href="/" className="dropdown-item">Profit</a>
-              {/* <!-- item--> */}
-              <a href="/" className="dropdown-item">Action</a>
-            </div>
-          </div>
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item >Sales Report</Dropdown.Item>
+              <Dropdown.Item >Export Report</Dropdown.Item>
+              <Dropdown.Item >Profit</Dropdown.Item>
+              <Dropdown.Item >Actions</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
 
         {/* name stock and variantion section */}

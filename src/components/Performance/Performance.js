@@ -1,4 +1,5 @@
 import React from 'react';
+import { Dropdown } from 'react-bootstrap';
 import { performanceData } from "../../config/PerformanceData";
 import styles from './Performance.module.css';
 
@@ -35,22 +36,24 @@ const Performance = () => {
   return (
     <div className="row">
       <div className="col-lg-8">
-        <div className="card">
+        <div className={`card ${styles.performanceTitle} hide-scrollbar`}>
           <div className="d-flex card-header justify-content-between align-items-center">
             <h4 className="header-title">Performance</h4>
             <div className="dropdown">
-              <a href="/" className="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
-                <i className="mdi mdi-dots-vertical"></i>
-              </a>
-              <div className="dropdown-menu dropdown-menu-end">
-                {/* {
-                  performanceList.map((item, idx) => {
-                    return (
-                      <span className="dropdown-item" key={idx}>{item}</span>
-                    )
-                  })
-                } */}
-              </div>
+              <Dropdown>
+                <Dropdown.Toggle id="dropdown-basic">
+                  <i className="mdi mdi-dots-vertical"></i>
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  {
+                    performanceList.map(({ title }, idx) => {
+                      return (
+                        <Dropdown.Item key={idx} >{title}</Dropdown.Item>
+                      )
+                    })
+                  }
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
           </div>
 

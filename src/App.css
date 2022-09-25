@@ -42,3 +42,32 @@ p {
   font-weight: 600;
   margin: 1px 0;
 }
+
+
+/* external bug fixed css */
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.fixedDropBG button {
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: black;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: var(--ct-dropdown-item-padding-y) var(--ct-dropdown-item-padding-x);
+  clear: both;
+  font-weight: 400;
+  color: var(--ct-dropdown-link-color);
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  line-height: 2;
+}
