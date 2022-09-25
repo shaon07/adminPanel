@@ -1,0 +1,15 @@
+.ActivityWrapper {
+  overflow: hidden scroll;
+  height: 31rem;
+}
+
+.ActivityWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.ActivityWrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Firefox */
+}

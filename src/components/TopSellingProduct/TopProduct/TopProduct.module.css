@@ -1,0 +1,15 @@
+.TopProductWrapper {
+  overflow: hidden scroll;
+  height: 31rem;
+}
+
+.TopProductWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.TopProductWrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Firefox */
+}

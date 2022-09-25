@@ -12,7 +12,7 @@ const SideMenu = () => {
 
       {
         sideMenu.map((item, idx) => {
-          return <SidebarList item={item} idx={idx} />
+          return <SidebarList item={item} key={idx} idx={idx} />
         })
       }
 

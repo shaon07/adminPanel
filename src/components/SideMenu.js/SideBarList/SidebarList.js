@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { FaChevronCircleRight, FaChevronCircleUp } from 'react-icons/fa';
+import './SidebarList.css';
 
 const SidebarList = ({ item, idx }) => {
   const [showClass, setShow] = useState(false);
@@ -16,7 +17,7 @@ const SidebarList = ({ item, idx }) => {
               showClass ? <FaChevronCircleUp /> : <FaChevronCircleRight />
           }
         </span>
-        <span> {item.heading} </span>
+        <span className="categoryHeading"> {item.heading} </span>
       </a>
       <div className={`collapse ${showClass ? "show" : ""}`} id="sidebarDashboards">
         <ul className="side-nav-second-level">
