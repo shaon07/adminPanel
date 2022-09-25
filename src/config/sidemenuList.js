@@ -1,5 +1,9 @@
 import { BiCategoryAlt } from 'react-icons/bi';
-import { RiCoupon3Line, RiLuggageCartLine } from 'react-icons/ri';
+import { BsGear } from 'react-icons/bs';
+import { FiUser } from 'react-icons/fi';
+import { HiOutlineMail } from 'react-icons/hi';
+import { MdOutlineTextsms } from 'react-icons/md';
+import { RiCoupon3Line, RiLuggageCartLine, RiPagesLine } from 'react-icons/ri';
 import { TbTruckDelivery } from 'react-icons/tb';
 
 export const sideMenu = [
@@ -25,22 +29,27 @@ export const sideMenu = [
   },
   {
     heading: "Customers",
-    childList: []
+    childList: [],
+    icon: <FiUser />
   },
   {
     heading: "Pages",
-    childList: []
+    childList: [],
+    icon: <RiPagesLine />
   },
   {
     heading: "Email",
-    childList: ["OutBox", "SMTP Informations", "Email Templates", "Compose Email"]
+    childList: ["OutBox", "SMTP Informations", "Email Templates", "Compose Email"],
+    icon: <HiOutlineMail />
   },
   {
     heading: "SMS",
-    childList: ["SMS Gateway", "SMS Templates"]
+    childList: ["SMS Gateway", "SMS Templates"],
+    icon: <MdOutlineTextsms />
   },
   {
     heading: "Settings",
-    childList: ['Site Informations', "Invoice Informations", "Site, Brand, App Logo", "Admin User", "User Profile", "Componenets", "Locale"]
+    childList: ['Site Informations', "Invoice Informations", "Site, Brand, App Logo", "Admin User", "User Profile", "Componenets", "Locale"],
+    icon: <BsGear />
   }
 ]
